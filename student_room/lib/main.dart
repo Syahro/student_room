@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:student_room/home_page.dart';
 import 'package:student_room/splash_page.dart';
 
 void main() {
