@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:student_room/theme.dart';
+import 'package:student_room/widget/course_tile.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -65,40 +66,117 @@ class HomePage extends StatelessWidget {
                     SizedBox(
                       height: 12,
                     ),
-                    ListTile(
-                        contentPadding: EdgeInsets.zero,
-                        leading: Container(
-                          height: 60,
-                          width: 60,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage('assets/images/icon1.png'),
-                            ),
+                    CourseTile(
+                      imageUrl: 'assets/images/icon1.png',
+                      title: 'Ideation',
+                      value: 0.7,
+                      isLocked: false,
+                      isPlay: true,
+                      isPause: false,
+                    ),
+                    CourseTile(
+                      imageUrl: 'assets/images/icon2.png',
+                      title: 'Validate Idea',
+                      value: 0.2,
+                      isLocked: false,
+                      isPlay: false,
+                      isPause: false,
+                    ),
+                    CourseTile(
+                      imageUrl: 'assets/images/icon3.png',
+                      title: 'Strong Promotion',
+                      value: 0.0,
+                      isLocked: true,
+                      isPlay: false,
+                      isPause: false,
+                    ),
+                    SizedBox(
+                      height: 25,
+                    ),
+                    Text(
+                      '# Targeting Customer',
+                      style: titleTextStyle.copyWith(
+                        fontSize: 18,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 12,
+                    ),
+                    CourseTile(
+                      imageUrl: 'assets/images/icon4.png',
+                      title: 'App Survey',
+                      value: 0.8,
+                      isLocked: false,
+                      isPlay: false,
+                      isPause: true,
+                    ),
+                    CourseTile(
+                      imageUrl: 'assets/images/icon5.png',
+                      title: 'Get Funding',
+                      value: 0.1,
+                      isLocked: false,
+                      isPlay: false,
+                      isPause: false,
+                    ),
+                    CourseTile(
+                      imageUrl: 'assets/images/icon6.png',
+                      title: 'Ship to Investor',
+                      value: 0.0,
+                      isLocked: true,
+                      isPlay: false,
+                      isPause: false,
+                    ),
+                    SizedBox(
+                      height: 50,
+                    ),
+                    Container(
+                      height: 50,
+                      width: MediaQuery.of(context).size.width -
+                          (2 * defaultMargin),
+                      child: RaisedButton(
+                        onPressed: () {},
+                        color: blueColorButton,
+                        child: Text(
+                          'Finish and Take Quiz',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w300,
+                            color: whiteColorButton,
+                            fontSize: 22,
                           ),
                         ),
-                        title: Text(
-                          'Ideation',
-                          style: titleTextStyle.copyWith(fontSize: 18),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(17),
                         ),
-                        subtitle: ClipRRect(
-                          borderRadius: BorderRadius.circular(15),
-                          child: LinearProgressIndicator(
-                            backgroundColor: Color(0XFFECEEF5),
-                            valueColor: AlwaysStoppedAnimation(
-                              Color(0XFFF35D22),
-                            ),
-                            value: 0.7,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Container(
+                      height: 50,
+                      width: MediaQuery.of(context).size.width -
+                          (2 * defaultMargin),
+                      child: RaisedButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        color: whiteColorButton,
+                        child: Text(
+                          'Skip to Home',
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.w300,
+                            color: darkGreyColorButton,
                           ),
                         ),
-                        trailing: Container(
-                          width: 32,
-                          height: 32,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage('assets/images/btn_play.png'),
-                            ),
-                          ),
-                        )),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(17),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 52,
+                    ),
                   ],
                 ),
               ),

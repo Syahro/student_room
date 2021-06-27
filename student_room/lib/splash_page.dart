@@ -66,7 +66,7 @@ class SplashPage extends StatelessWidget {
                 child: Text(
                   'Get Started',
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 22,
                     fontWeight: FontWeight.w300,
                     color: whiteColorButton,
                   ),
