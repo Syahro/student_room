@@ -45,13 +45,14 @@ class SplashPage extends StatelessWidget {
                 fontWeight: FontWeight.w300,
                 color: greyColor,
               ),
+              textAlign: TextAlign.center,
             ),
             SizedBox(
               height: 56,
             ),
             Container(
               height: 50,
-              width: MediaQuery.of(context).size.width - (2 * 24),
+              width: MediaQuery.of(context).size.width - (2 * defaultMargin),
               child: RaisedButton(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {

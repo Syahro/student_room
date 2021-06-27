@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+const double defaultMargin = 24.0;
+
 Color backgroundColor = Color(0XFFF7F8FB);
 Color blackColor = Color(0XFF161822);
 Color greyColor = Color(0XFF737583);
